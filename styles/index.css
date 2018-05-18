@@ -1,0 +1,90 @@
+* {
+	box-sizing: border-box;
+}
+
+.row {
+	max-width: 1000px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
+}
+
+.row::before, .row::after {
+	display: table;
+	content: '';
+}
+.col-3, .col-4, .col-6, .col-12 { 
+	float: left;
+	padding-left: 1.04166666%;
+	padding-right: 1.0416666%;
+}
+
+.nav-text {
+	margin-left: 5%;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+	width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+	.col-3 {
+		width: 25%;
+	}
+	.col-4 {
+		width: 33%;
+	}
+	.col-6 {
+		width: 50%;
+	}
+	.col-12 {
+		width: 100%;
+	}
+	.nav-text {
+		margin-left: 25%;
+	}
+}
+
+.header {
+    text-align: center;
+}
+
+.header > input {
+    height: 35px;
+    width: 200px;
+    border: 2px solid red;
+    padding: 5px 5px;
+}
+
+.sort-by-rating {
+    padding: 15px 15px;
+}
+
+.js-bookmark-list {
+    max-width: 80%;
+}
+
+.js-bookmark-element {
+    list-style: none;
+}
+
+.bookmark-title {
+    background-color: rgba(240,230,230,0.8);
+    font-size: 1.5em;
+}
+
+.visible {
+    display: block;
+}
+
+.is-invisible {
+    display: none;
+}
+
+form {
+    margin-bottom: 25px;
+}
+
+footer {
+    height: 80px;
+}

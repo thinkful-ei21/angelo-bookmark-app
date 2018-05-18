@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bookmark's app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header class="row header">
+        <h1>Bookmark App</h1>
+        <label for="js-bookmark-search" aria-label="search for a bookmark"></label>
+        <input type="text" class="js-bookmark-search" id="js-bookmark-search" placeholder="search">
+    </header>
+    <main class="row">
+        <section class="sort-by-rating">
+            <h2>Sort by rating</h2>
+            <select name="js-sort-rating" id="sort-by" aria-label="sort by rating">
+                <option value="1">1 star</option>
+                <option value="2">2 stars</option>
+                <option value="3">3 stars</option>
+                <option value="4">4 stars</option>
+                <option value="5">5 stars</option>
+            </select>
+        </section>
+    
+        <div class="col-6">
+            <ul class="js-bookmark-list"></ul>
+        </div>
+    </main>
+    <section class="col-6">
+        <article>
+            <h2>Add New Bookmark</h2>
+            <form class="add-form" id="add-bookmark-form">
+                <p>
+                    <label for="site-title">Site Title</label>
+                    <input type="text" name="title" id="site-title" placeholder="ex. Google" required>
+                </p>
+                
+                <p>
+                    <label for="site-url">Site Url</label>
+                    <input type="text" name="url" id="site-title" placeholder="ex. http://google.com" required>
+                </p>
+                <p>
+                    <label for="site-description">Description</label>
+                    <textarea type="text" name="desc" id="site-description" placeholder="ex. A site that you can find things" required></textarea>
+                </p>
+                <p>
+                <label for="site-rating">
+                    <select name="rating" id="site-rating">
+                        <option value="1">★</option>
+                        <option value="2">★★</option>
+                        <option value="3">★★★</option>
+                        <option value="4">★★★★</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </label>
+                </p>
+                <p>
+                    <button type="submit">submit</button>
+                </p>
+            </form>
+        </article>
+        <p id="error-handling">
+                    
+        </p>
+        <aside id="edit-bookmark">
+
+        </aside>
+    </section>
+    <footer></footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/api.js"></script>
+    <script type="text/javascript" src="scripts/store.js"></script>
+    <script type="text/javascript" src="scripts/bookmarks.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
